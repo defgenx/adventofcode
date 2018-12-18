@@ -1,4 +1,4 @@
-require "./common"
+require '../libs/common'
 
 class PartOne
     include Adventofcode::StreamFile

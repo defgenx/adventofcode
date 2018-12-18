@@ -1,0 +1,17 @@
+GIT
+  remote: git://github.com/k-tsj/pattern-match.git
+  revision: f37aba47ae4c48661c953f29f57a5ac74e7f9d3c
+  specs:
+    pattern-match (1.0.2dev)
+
+GEM
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pattern-match!
+
+BUNDLED WITH
+   1.13.6

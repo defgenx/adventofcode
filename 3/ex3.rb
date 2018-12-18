@@ -1,4 +1,4 @@
-require "./common"
+require '../libs/common'
 
 module Adventofcode
     module FileParser

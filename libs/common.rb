@@ -6,8 +6,16 @@ module Adventofcode
                     yield line
             end
         ensure
-          puts "Close file"
-          f.close
+            puts "Close file"
+            f.close
+        end
+
+        def readFullContent(file)
+            f = File.open(file, 'r')
+            f.read
+        ensure
+            puts "Close file"
+            f.close
         end
     end
 end
