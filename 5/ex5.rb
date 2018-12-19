@@ -50,24 +50,24 @@ RubyVM::InstructionSequence.new(<<-EOF).eval
                 firstChar = polymer[0]
                 stringToArray = polymer
                 stringToArray[0]= ''
-                test = [stringToArray, tmpArray.insert(0, firstChar)]
+                returnVal = [stringToArray, tmpArray.insert(0, firstChar)]
             elsif !polymer.empty? && !tmpArray.empty? && (polymer[0].ord - tmpArray.first.ord).abs == 32
                 stringToArray = polymer
                 stringToArray[0]= ''
-                test = [stringToArray, tmpArray.drop(1)]
+                returnVal = [stringToArray, tmpArray.drop(1)]
             elsif !polymer.empty? && !tmpArray.empty?
                 firstChar = polymer[0]
                 stringToArray = polymer
                 stringToArray[0]= ''
-                test = [stringToArray, tmpArray.insert(0, firstChar)]
+                returnVal = [stringToArray, tmpArray.insert(0, firstChar)]
             elsif polymer.empty?
-                test = tmpArray.length
+                returnVal = tmpArray.length
             else
                 puts "No matching pattern found ! \nStopping program..."
                 exit
             end
-            return test unless test.kind_of?(Array)
-            reactPerf(test[0], test[1])
+            return returnVal unless returnVal.kind_of?(Array)
+            reactPerf(returnVal.first, returnVal.last)
         end
     end
 
