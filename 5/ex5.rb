@@ -1,6 +1,6 @@
 RubyVM::InstructionSequence.compile_option = {
-  :tailcall_optimization => true,
-  :trace_instruction => false
+    :tailcall_optimization => true,
+    :trace_instruction => false
 }
 
 
@@ -89,10 +89,10 @@ EOF
 # Exercice 5 Part Two
 classe = PartTwo.new
 fileString = classe.readFullContent('./input_ex5.txt')
-tmpArray =  ("a".."z").map do |l|
-    tmpStr = fileString.clone
-    tmpStr.delete!(l)
-    tmpStr.delete!(l.upcase)
-    classe.reactPerf(tmpStr, Array.new)
+tmpArray = ("a".."z").map do |l|
+  tmpStr = fileString.clone
+  tmpStr.delete!(l)
+  tmpStr.delete!(l.upcase)
+  classe.reactPerf(tmpStr, Array.new)
 end
 p tmpArray.min
