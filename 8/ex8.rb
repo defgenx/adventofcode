@@ -36,21 +36,24 @@ module Adventofcode
       end
     end
   end
+
+  module ExecuteEx
+    include Adventofcode::TreeNode
+    def execute((nb_child, nb_meta, *rest))
+      t = Node.new(nb_child, nb_meta)
+      t.get_nb_child.times do |_|
+        (child, rest) = execute(rest)
+        t.add_child(child)
+      end
+      t.get_nb_meta.times {|meta| t.add_metadata(rest[meta])}
+      [t, rest[t.get_nb_meta..rest.size]]
+    end
+  end
 end
 
 class PartOne
   include Adventofcode::FileParser
-  include Adventofcode::TreeNode
-
-  def execute((nb_child, nb_meta, *rest))
-    t = Node.new(nb_child, nb_meta)
-    t.get_nb_child.times do |_|
-      (child, rest) = execute(rest)
-      t.add_child(child)
-    end
-    t.get_nb_meta.times {|meta| t.add_metadata(rest[meta])}
-    [t, rest[t.get_nb_meta..rest.size]]
-  end
+  include Adventofcode::ExecuteEx
 
   def sum_meta_tree(node)
     sum = 0
@@ -63,17 +66,7 @@ end
 
 class PartTwo
   include Adventofcode::FileParser
-  include Adventofcode::TreeNode
-
-  def execute((nb_child, nb_meta, *rest))
-    t = Node.new(nb_child, nb_meta)
-    t.get_nb_child.times do |_|
-      (child, rest) = execute(rest)
-      t.add_child(child)
-    end
-    t.get_nb_meta.times {|meta| t.add_metadata(rest[meta])}
-    [t, rest[t.get_nb_meta..rest.size]]
-  end
+  include Adventofcode::ExecuteEx
 
   def sum_meta_tree(node)
     sum = 0
