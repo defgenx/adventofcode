@@ -16,11 +16,11 @@ module Adventofcode
 
       until remaining.empty?
         step = remaining.find {|step|
-          # p step, tree[step], finalString
-          # p "--------------"
+          p step, tree[step], finalString
+          p "--------------"
           tree[step].subset?(finalString)
         }
-        # p "Add #{step}"
+        p "Add #{step}"
         remaining.delete(step)
         finalString.add(step)
       end
@@ -39,5 +39,10 @@ end
 
 # Exercice 7 Part One
 classe = PartOne.new
+a = classe.parse('./input_ex7.txt')
+p a.to_a.join
+
+# Exercice 7 Part Two
+classe = PartTwo.new
 a = classe.parse('./input_ex7.txt')
 p a.to_a.join
