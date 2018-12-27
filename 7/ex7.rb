@@ -21,6 +21,7 @@ module Adventofcode
                 tree[matching[2]][:children].sort!
             end
             tree = sortHashByKey(tree)
+            p tree
             foundRoots = findRoots(tree)
             aggrChar = ''
             foundRoots.each do |char|
@@ -31,7 +32,7 @@ module Adventofcode
 
         private
 
-        def search?(tree, (valToFind, keyVal))
+        def search?(tree, valToFind)
             return true if tree[valToFind][:parents].length > 1
             false
         end
@@ -39,8 +40,8 @@ module Adventofcode
         def findNext(root, tree)
             aggrChar = root
             tree[root][:children].each do |currentCharChild, _|
-                if search?(tree, [currentCharChild, root])
-                    tree[currentCharChild][:parents].delete(tree[currentCharChild][:parents].first)
+                if search?(tree, currentCharChild)
+                    tree[currentCharChild][:parents].delete(root)
                     next
                 end
                 aggrChar += findNext(currentCharChild, tree)
@@ -53,7 +54,7 @@ module Adventofcode
         end
 
         def findRoots(tree)
-            tree.map{|key, subHash| key if subHash[:parents].empty?}.delete_if{|i| i.nil?}.sort!
+            tree.map{|key, subHash| key if subHash[:parents].empty?}.delete_if(&:nil?).sort!
         end
 
     end
