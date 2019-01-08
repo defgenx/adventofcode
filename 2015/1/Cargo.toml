@@ -1,0 +1,11 @@
+[package]
+name = "ex1"
+version = "0.1.0"
+authors = ["Alexandre Del Vecchio <alexandre@delvecch.io>"]
+
+[dependencies]
+adventofcode = { path = "../lib/adventofcode" }
+
+[[bin]]
+name = "ex1"
+path = "src/ex1.rs"

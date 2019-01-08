@@ -1,0 +1,10 @@
+[package]
+name = "adventofcode"
+version = "0.1.0"
+authors = ["Alexandre Del Vecchio <alexandre.del-vecchio@digitick.com>"]
+
+[dependencies]
+
+[lib]
+name = "adventofcode"
+path = "src/adventofcode.rs"
