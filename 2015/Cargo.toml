@@ -16,5 +16,5 @@ path = "1/src/main.rs"
 name = "ex2"
 path = "2/src/main.rs"
 [[bin]]
-name = "bmp"
-path = "bmp/src/main.rs"
+name = "ex3"
+path = "3/src/main.rs"
