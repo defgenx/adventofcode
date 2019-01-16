@@ -1,0 +1,13 @@
+[package]
+name = "advent_of_code_2018"
+version = "0.1.0"
+authors = ["Alexandre Del Vecchio <alexandre@delvecch.io>"]
+edition = "2018"
+
+[dependencies]
+adventofcode = { path = "../../2015/lib/advent_of_code" }
+regex = "1"
+
+[[bin]]
+name = "ex9"
+path = "./src/main.rs"
