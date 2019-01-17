@@ -1,6 +1,5 @@
 extern crate regex;
 use regex::Regex;
-use std::collections::HashMap;
 fn main() {
     let regex_string = Regex::new(r"(\d+)x(\d+)x(\d+)").unwrap();
     let stream_buffer = advent_of_code::file::read_stream();
