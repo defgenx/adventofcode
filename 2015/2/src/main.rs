@@ -1,5 +1,7 @@
 extern crate regex;
+
 use regex::Regex;
+
 fn main() {
     let regex_string = Regex::new(r"(\d+)x(\d+)x(\d+)").unwrap();
     let stream_buffer = advent_of_code::file::read_stream();
@@ -11,7 +13,7 @@ fn main() {
          match_str[2].parse::<i32>().unwrap().to_owned(),
          match_str[3].parse::<i32>().unwrap().to_owned()
         )
-    }).map( |tuple_match| {
+    }).map(|tuple_match| {
         let first = tuple_match.0 * tuple_match.1;
         let second = tuple_match.1 * tuple_match.2;
         let third = tuple_match.0 * tuple_match.2;
@@ -30,10 +32,10 @@ fn main() {
         let defer_to_native_str = &*line.unwrap();
         let match_str = &regex_string.captures(defer_to_native_str).unwrap();
         [match_str[1].parse::<i32>().unwrap().to_owned(),
-         match_str[2].parse::<i32>().unwrap().to_owned(),
-         match_str[3].parse::<i32>().unwrap().to_owned()
+            match_str[2].parse::<i32>().unwrap().to_owned(),
+            match_str[3].parse::<i32>().unwrap().to_owned()
         ]
-    }).map( |array_match| {
+    }).map(|array_match| {
         let mut sorted_array = array_match;
         sorted_array.sort();
         (2 * sorted_array[0]) + (2 * sorted_array[1]) + (sorted_array[0] * sorted_array[1] * sorted_array[2])
@@ -41,5 +43,4 @@ fn main() {
         sum_ribbon += line;
     }
     println!("{:?}", sum_ribbon);
-
 }

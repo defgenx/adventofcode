@@ -1,12 +1,12 @@
 pub mod file {
-    use std::io::prelude::*;
-    use std::io::{Lines, BufReader, Bytes};
-    use std::fs::File;
-    use std::error::Error;
     use std::env;
+    use std::error::Error;
+    use std::fs::File;
+    use std::io::{BufReader, Bytes, Lines};
+    use std::io::prelude::*;
     use std::path::Path;
 
-    fn get_args() -> String  {
+    fn get_args() -> String {
         let args: Vec<String> = env::args().collect();
         args[1].to_string()
     }
@@ -27,7 +27,7 @@ pub mod file {
         let mut s = String::new();
         match file_handler.read_to_string(&mut s) {
             Err(why) => panic!("couldn't read cause: {}", why.description()),
-            Ok(_) => {},
+            Ok(_) => {}
         };
         s
     }

@@ -7,7 +7,7 @@ fn part_one() {
     let mut counter = 0;
     for line in reader {
         let my_line = line.unwrap();
-        if count_vowels(my_line.to_owned()) >= 3 && find_double(my_line.to_owned()) && contain_pattern(my_line.to_owned()){
+        if count_vowels(my_line.to_owned()) >= 3 && find_double(my_line.to_owned()) && contain_pattern(my_line.to_owned()) {
             counter += 1;
         }
     }
@@ -17,7 +17,7 @@ fn part_one() {
 
 fn count_vowels(line: String) -> i32 {
     let sum = line.chars().fold(0, |sum, x| {
-        if x == 'a' ||x == 'e' || x == 'i' || x == 'o' || x == 'u' {
+        if x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u' {
             sum + 1
         } else {
             sum

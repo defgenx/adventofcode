@@ -1,4 +1,3 @@
-
 extern crate advent_of_code;
 
 fn main() {
@@ -7,7 +6,7 @@ fn main() {
     (count_stop(data.clone()));
 }
 
-fn count (content: String) {
+fn count(content: String) {
     let mut sum = 0;
     for char_val in content.chars() {
         if char_val == '(' {
@@ -19,7 +18,7 @@ fn count (content: String) {
     println!("{:#?}", sum)
 }
 
-fn count_stop (content: String) {
+fn count_stop(content: String) {
     let mut sum = 0;
     let mut pos: usize = 0;
     for (i, char_val) in content.chars().enumerate() {

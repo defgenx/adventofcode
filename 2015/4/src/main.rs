@@ -14,7 +14,7 @@ fn part_one() {
 //        println!("{:#?}", md5::compute(format!("b\"{}\"", concat)));
         counter += 1;
     }
-    println!("String {} has hash {} so response is {:#?}", string_ex, string_hash, (counter -1));
+    println!("String {} has hash {} so response is {:#?}", string_ex, string_hash, (counter - 1));
 }
 
 fn part_two() {
@@ -28,5 +28,5 @@ fn part_two() {
 //        println!("{:#?}", md5::compute(format!("b\"{}\"", concat)));
         counter += 1;
     }
-    println!("String {} has hash {} so response is {:#?}", string_ex, string_hash, (counter -1));
+    println!("String {} has hash {} so response is {:#?}", string_ex, string_hash, (counter - 1));
 }
