@@ -104,9 +104,10 @@ fn parse() {
         let my_line = line.unwrap();
         current_operation = my_line.parse().clone().unwrap();
         values = current_operation.values();
-        instruction_map.insert(values.last().unwrap().as_str(), String::from(current_operation.name()));
+        instruction_map.insert(String::from(values.last().unwrap().as_str()), values);
 //        println!("{:#?}{:#?}", key, name);
     }
+    println!("{:#?}", instruction_map);
 }
 
 //fn part_one(end_point: String) {}
