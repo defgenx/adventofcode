@@ -2,8 +2,10 @@ package common
 
 import (
 	"bufio"
+	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 )
 
 func OpenInputFile(filename string) *os.File {
@@ -16,4 +18,16 @@ func OpenInputFile(filename string) *os.File {
 
 func ReadBuffer(file *os.File) *bufio.Scanner {
 	return bufio.NewScanner(file)
+}
+
+func ReadFile(filename string) []byte {
+	data, err := ioutil.ReadFile(filename)
+	if err != nil {
+		log.Fatal("File reading error", err)
+	}
+	return data
+}
+
+func SplitStringToSlice(input string) []string {
+	return strings.Split(input, ",")
 }
