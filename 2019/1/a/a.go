@@ -14,7 +14,7 @@ func main() {
 	var fuelSum = 0
 	for buffer.Scan() {
 		mass, _ := strconv.Atoi(buffer.Text())
-		fuelSum = fuelSum + (int(math.Floor(float64(mass) / 3)) - 2)
+		fuelSum = fuelSum + (int(math.Floor(float64(mass)/3)) - 2)
 	}
 
 	if err := buffer.Err(); err != nil {

@@ -15,7 +15,7 @@ func main() {
 	for buffer.Scan() {
 		//log.Print("Begin Row")
 		mass, _ := strconv.Atoi(buffer.Text())
-		fuelSum = fuelSum + recurseFuel(int(math.Floor(float64(mass) / 3)) - 2)
+		fuelSum = fuelSum + recurseFuel(int(math.Floor(float64(mass)/3))-2)
 		//log.Print("End Row")
 	}
 
@@ -31,7 +31,7 @@ func recurseFuel(fuel int) int {
 		return fuel
 	}
 	if fuel > 0 {
-		return fuel + recurseFuel(int(math.Floor(float64(fuel) / 3)) - 2)
+		return fuel + recurseFuel(int(math.Floor(float64(fuel)/3))-2)
 	}
 	return 0
 }
