@@ -9,8 +9,16 @@ adventofcode = { path = "../2015/lib/advent_of_code" }
 
 [[bin]]
 name = "ex1_a"
-path = "1/a/a.rs"
+path = "1/b/b.rs"
 
 [[bin]]
 name = "ex1_b"
 path = "1/b/b.rs"
+
+[[bin]]
+name = "ex2_a"
+path = "2/a/a.rs"
+
+[[bin]]
+name = "ex2_b"
+path = "2/b/b.rs"

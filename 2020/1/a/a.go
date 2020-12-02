@@ -2,7 +2,6 @@ package main
 
 import (
 	"2020/common"
-	"fmt"
 	"log"
 	"strconv"
 )
@@ -11,7 +10,6 @@ func main() {
 	file := common.OpenInputFile("1/input.txt")
 	buffer := common.ReadBuffer(file)
 	var list []int
-	var fuelSum = 0
 	for buffer.Scan() {
 		val, _ := strconv.Atoi(buffer.Text())
 		list = append(list, val)
@@ -27,5 +25,4 @@ func main() {
 			}
 		}
 	}
-	fmt.Printf("Total fuel needed: %d", fuelSum)
 }
