@@ -22,3 +22,11 @@ path = "2/a/a.rs"
 [[bin]]
 name = "ex2_b"
 path = "2/b/b.rs"
+
+[[bin]]
+name = "ex3_a"
+path = "3/a/a.rs"
+
+[[bin]]
+name = "ex3_b"
+path = "3/b/b.rs"
