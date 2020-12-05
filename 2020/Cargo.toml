@@ -6,6 +6,7 @@ edition = "2018"
 
 [dependencies]
 adventofcode = { path = "../2015/lib/advent_of_code" }
+regex = "1"
 
 [[bin]]
 name = "ex1_a"
@@ -30,3 +31,11 @@ path = "3/a/a.rs"
 [[bin]]
 name = "ex3_b"
 path = "3/b/b.rs"
+
+[[bin]]
+name = "ex4_a"
+path = "4/a/a.rs"
+
+[[bin]]
+name = "ex4_b"
+path = "4/b/b.rs"

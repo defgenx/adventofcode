@@ -1,10 +1,10 @@
 use std::collections::HashMap;
 
 fn main() {
-    a();
+    b();
 }
 
-fn a() {
+fn b() {
     let list = advent_of_code::file::read_stream();
     let mut total_trees: i64 = 1;
     let vec_rows: Vec<String> =
