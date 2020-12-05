@@ -39,3 +39,11 @@ path = "4/a/a.rs"
 [[bin]]
 name = "ex4_b"
 path = "4/b/b.rs"
+
+[[bin]]
+name = "ex5_a"
+path = "5/a/a.rs"
+
+[[bin]]
+name = "ex5_b"
+path = "5/b/b.rs"
