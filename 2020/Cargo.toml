@@ -47,3 +47,11 @@ path = "5/a/a.rs"
 [[bin]]
 name = "ex5_b"
 path = "5/b/b.rs"
+
+[[bin]]
+name = "ex6_a"
+path = "6/a/a.rs"
+
+[[bin]]
+name = "ex6_b"
+path = "6/b/b.rs"
