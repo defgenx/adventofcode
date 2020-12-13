@@ -1,0 +1,16 @@
+[package]
+name = "advent_of_code_2021"
+version = "0.1.0"
+authors = ["Alexandre Del Vecchio <alexandre@delvecch.io>"]
+edition = "2021"
+
+[dependencies]
+adventofcode = { path = "../2015/lib/advent_of_code" }
+
+[[bin]]
+name = "ex1_a"
+path = "1/a/a.rs"
+
+[[bin]]
+name = "ex1_b"
+path = "1/b/b.rs"

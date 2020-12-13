@@ -1,6 +1,5 @@
 pub mod file {
     use std::env;
-    use std::error::Error;
     use std::fs::File;
     use std::io::{BufReader, Bytes, Lines};
     use std::io::prelude::*;
@@ -14,7 +13,7 @@ pub mod file {
     fn load_file(fileinput: String) -> File {
         // Open file in ro mode
         let file = match File::open(Path::new(&fileinput)) {
-            Err(why) => panic!("couldn't open exercise file cause: {}", why.description()),
+            Err(why) => panic!("couldn't open exercise file cause: {}", why.to_string()),
             Ok(file) => file,
         };
         file
@@ -26,7 +25,7 @@ pub mod file {
         // Init string var
         let mut s = String::new();
         match file_handler.read_to_string(&mut s) {
-            Err(why) => panic!("couldn't read cause: {}", why.description()),
+            Err(why) => panic!("couldn't read cause: {}", why.to_string()),
             Ok(_) => {}
         };
         s
@@ -34,7 +33,7 @@ pub mod file {
 
     pub fn read_data() -> Bytes<File> {
         let path_arg = get_args();
-        let mut file_handler = load_file(path_arg);
+        let file_handler = load_file(path_arg);
         // Init string var
         file_handler.bytes()
     }
