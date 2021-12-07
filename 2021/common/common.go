@@ -34,3 +34,12 @@ func Sum(array []int) int {
 	}
 	return result
 }
+
+func Range(start, end int) []int {
+	s := make([]int, 0, 1+(end-start))
+	for start <= end {
+		s = append(s, start)
+		start += 1
+	}
+	return s
+}
