@@ -43,3 +43,17 @@ func Range(start, end int) []int {
 	}
 	return s
 }
+
+func MinMax(array []int) (min, max int) {
+	max = array[0]
+	min = array[0]
+	for _, value := range array {
+		if max < value {
+			max = value
+		}
+		if min > value {
+			min = value
+		}
+	}
+	return
+}
