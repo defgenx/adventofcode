@@ -1,3 +1,14 @@
-.idea/
 target/
 .bundle/
+
+# Erlang / Gleam
+*.beam
+*.ez
+build
+erl_crash.dump
+
+# IntelliJ
+.idea
+
+# Bin dir
+bin
