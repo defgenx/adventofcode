@@ -1,4 +1,4 @@
-# ex_3
+# ex_7
 
 [![Package Version](https://img.shields.io/hexpm/v/ex_1)](https://hex.pm/packages/ex_1)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/ex_1/)
