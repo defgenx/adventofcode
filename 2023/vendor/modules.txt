@@ -1,0 +1,2 @@
+# github.com/juliangruber/go-intersect v1.1.0
+## explicit; go 1.14
